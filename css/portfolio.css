@@ -1,0 +1,179 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Open sans, serif;
+}
+header{
+    background:url("../img/code.jpg") no-repeat top center fixed;
+    background-size : cover;
+}
+.bg-cover{
+    position:absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    background-color: rgba(0,5,8,0.75);
+}
+/************************
+*********  NAVBAR ********
+*************************
+ */
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+
+.navbar.full{
+    height: 100px;
+    line-height: 100px;
+}
+.navbar.shrink{
+    height: 60px;
+    line-height: 60px;
+    background: #222;
+}
+.navbar.shrink img{
+    width: 70px;
+    height: 70px;
+}
+.navbar-logo{
+    float: left;
+    margin-left: 10px;
+}
+.navbar-logo img{
+    width: 120px;
+    height: 120px;
+    vertical-align: middle;
+}
+.navbar-menu{
+      overflow:hidden;
+      text-align: right;
+  }
+.navbar-menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #FFF;
+    padding: 0 15px;
+}
+.navbar-menu .active{
+    color: #fec503;
+}
+/************************
+*********  Style GENERIQUES ********
+*************************
+ */
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.content{
+    height: 1000px;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+.header-content{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 33%;
+    z-index: 2;
+    font-family: Open sans;
+    text-align: center;
+    color: #FFF;
+}
+.header-content h1{
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+    font-size: 50px;
+    font-weight: 600;
+
+}
+.header-content p{
+   line-height: 1.5em;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 50px 100px;
+
+
+}
+.btn{
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.btn-transparent{
+    border: 1px solid;
+    color: #FFFFFF;
+}
+.btn-transparent:hover{
+    background: #FFFFFF;
+    color: #000000;
+}
+.btn-yellow{
+    z-index: 1;
+    color: #000;
+    background : #fec503;
+    border : 1px solid #fec503
+}
+.btn-yellow:hover{
+    color: #FFFFFF;
+    background : transparent;
+
+}
+.scroll-down{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.scroll-down img{
+    width: 70px;
+    height: 50px ;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+@media(max-width: 768px){
+    .navbar-menu{
+        display: none;
+    }
+    .navbar-logo{
+        margin-left: 30px;
+    }
+    .navbar.shrink .nav-ico-resp{
+         position: relative;
+         display: block;
+         float: right;
+         width: 45px;
+            height: 60px;
+         cursor: pointer;
+     }
+    .navbar.shrink .nav-ico-resp:after{
+        content:'';
+        position: absolute;
+        display: block;
+        width: 1rem;
+        height: 0;
+        left: 15px;
+        box-shadow: 0 10px 0 1px white,0 16px 0 1px white,0 22px 0 1px white;
+    }
+    .nav-ico-resp{
+        overflow:hidden;
+        margin-right:20px;
+    }
+}

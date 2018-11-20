@@ -1,0 +1,61 @@
+
+
+@media only screen and(max-width: 768px){
+
+$menu-icon-bg: #fec503;
+$menu-icon-color: #FFF;
+$duration : 0.5s;
+
+.menu-ico{
+
+	position: relative;
+	width: 54px;
+	height: 54px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+	border-radius: 50%;
+
+	span{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 22px;
+		height: 2px;
+
+		background-color: $menu-icon-color;
+		transform: translateX(-50%) translateY(-50%);
+
+		&::before, &::after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 22px;
+			height: 2px;
+			background-color: $menu-icon-color;
+			transform : translateY(-6px);
+			transition : transform $duration;
+
+		}
+		&::after{
+			transform:translateY(6px);
+		}
+
+	}
+
+	&:hover{
+		span::before{
+			transform: translateY(-8px);
+		}
+		span::after{
+			transform : translateY(8px);
+		}
+
+	}
+	
+
+}
+}

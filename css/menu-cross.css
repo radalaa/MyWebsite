@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px) {
+  .menu-icon-cross {
+    transition: transform 0.5s; }
+    .menu-icon-cross span::before, .menu-icon-cross span::after {
+      transform-origin: 50% 50%; }
+    .menu-icon-cross span {
+      z-index: 2;
+      transition: background 0.5s, transform 0.5s; }
+    .menu-icon-cross svg {
+      position: relative;
+      z-index: 1;
+      fill: #fec503;
+      stroke-width: 1px;
+      stroke: #FFF;
+      stroke-dasharray: 165;
+      stroke-dashoffset: 165;
+      transition: stroke-dashoffset 0.5s, transform 0.5s; }
+    .menu-icon-cross.is-opened {
+      transform: rotate(180deg); }
+      .menu-icon-cross.is-opened span {
+        background: transparent; }
+      .menu-icon-cross.is-opened span::before {
+        transform: translateY(0) rotate(45deg); }
+      .menu-icon-cross.is-opened span::after {
+        transform: translateY(0) rotate(-45deg); }
+      .menu-icon-cross.is-opened svg {
+        transform: rotate(-180deg);
+        stroke-dashoffset: 0; } }
+
+/*# sourceMappingURL=menu-cross.css.map */

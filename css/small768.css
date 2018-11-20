@@ -1,0 +1,7 @@
+@media screen and (max-width: px){
+    #slide{ display: none;
+    }
+    .menu-ico{
+	display: inline;
+}
+}
